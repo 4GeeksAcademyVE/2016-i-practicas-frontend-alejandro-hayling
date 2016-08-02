@@ -1,0 +1,37 @@
+body{
+background-image: url("../images/fondo.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.thumb{
+
+	margin-top: 20px;
+	margin-bottom: 20px
+
+}
+
+.thumbnail{
+	color: white;
+	background: rgba(133,133,133,1);
+background: -moz-linear-gradient(top, rgba(133,133,133,1) 0%, rgba(153,153,153,0.97) 12%, rgba(176,176,176,0.94) 25%, rgba(122,122,122,0.86) 63%, rgba(74,74,74,0.8) 85%, rgba(31,31,31,0.79) 93%, rgba(0,0,0,0.77) 99%, rgba(124,121,124,0.77) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(133,133,133,1)), color-stop(12%, rgba(153,153,153,0.97)), color-stop(25%, rgba(176,176,176,0.94)), color-stop(63%, rgba(122,122,122,0.86)), color-stop(85%, rgba(74,74,74,0.8)), color-stop(93%, rgba(31,31,31,0.79)), color-stop(99%, rgba(0,0,0,0.77)), color-stop(100%, rgba(124,121,124,0.77)));
+background: -webkit-linear-gradient(top, rgba(133,133,133,1) 0%, rgba(153,153,153,0.97) 12%, rgba(176,176,176,0.94) 25%, rgba(122,122,122,0.86) 63%, rgba(74,74,74,0.8) 85%, rgba(31,31,31,0.79) 93%, rgba(0,0,0,0.77) 99%, rgba(124,121,124,0.77) 100%);
+background: -o-linear-gradient(top, rgba(133,133,133,1) 0%, rgba(153,153,153,0.97) 12%, rgba(176,176,176,0.94) 25%, rgba(122,122,122,0.86) 63%, rgba(74,74,74,0.8) 85%, rgba(31,31,31,0.79) 93%, rgba(0,0,0,0.77) 99%, rgba(124,121,124,0.77) 100%);
+background: -ms-linear-gradient(top, rgba(133,133,133,1) 0%, rgba(153,153,153,0.97) 12%, rgba(176,176,176,0.94) 25%, rgba(122,122,122,0.86) 63%, rgba(74,74,74,0.8) 85%, rgba(31,31,31,0.79) 93%, rgba(0,0,0,0.77) 99%, rgba(124,121,124,0.77) 100%);
+background: linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(153,153,153,0.97) 12%, rgba(176,176,176,0.94) 25%, rgba(122,122,122,0.86) 63%, rgba(74,74,74,0.8) 85%, rgba(31,31,31,0.79) 93%, rgba(0,0,0,0.77) 99%, rgba(124,121,124,0.77) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#7c797c', GradientType=0 );
+}
+.container{
+
+	background-color: black;
+	margin-top: 25px;
+	
+}
+a:link {   
+ text-decoration:none;   
+ color: yellow;
+} 
+
+
+

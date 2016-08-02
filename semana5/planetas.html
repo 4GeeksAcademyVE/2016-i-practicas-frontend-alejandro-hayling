@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Wars</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="js/jquery.min.js"></script>
+
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+<div class="container" >
+
+
+<div class="row" id="menu">
+	<div class="col-xs-12" id="menu">
+			<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#"><img src="images/logo.png" style="height:60px"></a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="info.html">Films</a></li>
+		      <li><a href="personajes.html">Personajes</a></li>
+		      <li><a href="planetas.html">Planetas</a></li> 
+		      <li><a href="vehiculos.html">Vehiculos</a></li>
+		      <li><a href="cruceros.html">Cruceros espaciales</a></li> 
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+</div>
+	
+	<div class="row" id="planetas">
+		
+		
+
+	</div>
+</div>
+
+	<div class="row">
+   <button value="" class="previous btn btn-primary disabled">previous</button>
+   <button value="" class="next btn btn-primary disabled">next</button>
+ </div>
+
+</div>
+
+<script type="text/javascript" >
+	
+	         function cargarPlanets(_url){
+
+        $.ajax({
+           type: "GET",
+           url: _url,
+           dataType: "json",
+           success: function(data){
+              if(data.previous!=null){
+                 $('.previous').attr('value',data.previous);
+                 $('.previous').removeClass('disabled');
+              }else{
+                 $('.previous').addClass('disabled');
+              }
+              if(data.next!=null){
+                 $('.next').attr('value',data.next);
+                 $('.next').removeClass('disabled');
+              }else{
+                 $('.next').addClass('disabled');
+              }
+              $("#planetas").html("");
+               for (var i = 0; i < data.results.length; i++){
+                   $('#planetas').append('<div class="col-md-6" style="background:rgba(185, 204, 220,0.5); height: 300px;">' +
+                       '<div class="info"><a href="#"class="thumbnail" style="height:100%"> ' +
+                       '<h3>' + data.results[i].name +'</h3>' +
+                       '<p>Diametro: '+ data.results[i].diameter+'</p>' +
+                       '<p>Clima: '+ data.results[i].climate+'</p>' +
+                       '<p>Terrenos: '+ data.results[i].terrain+'</p>' +
+                       '<p>Superficie Agua: '+ data.results[i].surface_water+'</p>' +
+                       '<p>Poblacion: '+ data.results[i].population+'</p>' +
+                       '</div>');
+
+                     
+                    
+               }
+           }
+       });
+        }
+     
+       
+             cargarPlanets("http://swapi.co/api/planets/");
+
+              $('.next').on("click", function(){
+                 var url = this.value;
+                 cargarPlanets(url);
+              });
+
+              $('.previous').on("click", function(){
+                 var url = this.value;
+                 cargarPlanets(url);
+              });
+
+</script>
+</body>
+</html>
